@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Project Drive Sync 的个人文件同步隐私说明、Google OAuth 权限范围及撤销方式。">
+  <title>隐私说明 · AI Project Drive Sync</title>
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; color: #202d3b; background: #f5f7f9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.8; }
+    main { width: min(100% - 40px, 760px); margin: 64px auto; padding: 40px; background: #fff; border: 1px solid #e0e6eb; border-radius: 16px; }
+    .eyebrow { margin: 0 0 8px; color: #516779; font-size: 14px; letter-spacing: .05em; }
+    h1 { margin: 0 0 20px; font-size: clamp(26px, 5vw, 36px); line-height: 1.25; overflow-wrap: anywhere; }
+    h2 { margin: 28px 0 8px; font-size: 19px; }
+    p { margin: 12px 0; }
+    a { color: #195b8b; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid #8ebcdd; outline-offset: 4px; }
+    footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid #e0e6eb; color: #5d6a75; font-size: 14px; }
+    @media (max-width: 520px) { main { margin: 24px auto; padding: 24px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">AI Project Drive Sync · Privacy</p>
+      <h1>隐私说明</h1>
+      <p>本说明适用于 HaosuStrasbourg 的个人 Google Drive 同步配置及本静态说明网站。同步工具拟使用 rclone，仅供本人在自己控制的 Linux 设备与本人 Google Drive 之间同步选定资料；本页不表示同步配置已经完成。</p>
+    </header>
+    <section aria-labelledby="data">
+      <h2 id="data">访问哪些数据，为什么访问</h2>
+      <p>为完成双向同步，工具需要读取选定文件的内容、名称、目录结构及修改时间等元数据，并按配置创建、更新、重命名或删除文件。相关数据仅用于文件同步、状态比较和故障排查，不出售，不用于广告，也不用于 AI 模型训练。</p>
+    </section>
+    <section aria-labelledby="scope">
+      <h2 id="scope">授权范围与实际同步范围</h2>
+      <p>Google OAuth 可能授予覆盖整个 Google Drive 的读取和修改权限。工具通过同步配置限制实际处理的目录；这个配置限制不等于 Google OAuth 层面的目录级权限隔离。使用者应在授权页面核对权限，并在启用同步前核对实际目录范围。</p>
+    </section>
+    <section aria-labelledby="storage">
+      <h2 id="storage">数据传输与保留</h2>
+      <p>按照本项目的配置方式，同步文件、元数据及 OAuth 授权仅在用户控制的设备与 Google 服务之间处理。授权凭据保存在用户控制的设备上，不提交到本网站或公开代码仓库。本项目不设置接收这些资料的第三方后台。</p>
+      <p>本地文件及同步状态保留在用户设备上，云端文件保留在 Google Drive 中，直至用户自行删除或依据同步规则发生变更。设备上的同步记录可能包含文件名等元数据，由用户管理和清理。</p>
+    </section>
+    <section aria-labelledby="control">
+      <h2 id="control">停止同步与撤销授权</h2>
+      <p>用户可以停止同步程序或停用定时任务，并在 <a href="https://myaccount.google.com/connections">Google 账号的第三方连接管理页</a>撤销本应用的访问权限。撤销授权不会自动删除已保存在设备或 Google Drive 中的文件；用户可分别管理文件，并删除设备上的授权配置和同步记录。</p>
+      <p>双向同步会传播已配置范围内的文件变更，包括删除。授权也可能因撤销或服务规则而失效；本项目不保证同步永不出错或授权永久有效。</p>
+    </section>
+    <section aria-labelledby="website">
+      <h2 id="website">本说明网站</h2>
+      <p>本网站不上传或接收同步资料，不设置登录或上传表单，不主动添加分析脚本、广告或跟踪 Cookie。网站由 GitHub Pages 托管；GitHub 可能处理访客 IP 地址和访问记录等信息，具体见 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。这些网站访问记录与 Google Drive 同步资料分开。</p>
+    </section>
+    <footer>
+      <p><a href="index.html">返回用途说明</a> · <a href="https://github.com/HaosuStrasbourg/ai-project-drive-sync-info/issues">联系维护者</a></p>
+      <p>GitHub Issues 为公开入口，请勿提交私人文件、账号凭据或其他敏感信息。数据处理方式变化时，本说明将相应更新。</p>
+      <p>更新日期：2026-10-11</p>
+    </footer>
+  </main>
+</body>
+</html>
