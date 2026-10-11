@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Project Drive Sync：个人 Linux 设备与本人 Google Drive 之间的文件同步用途说明。">
+  <title>AI Project Drive Sync · 用途说明</title>
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; color: #202d3b; background: #f5f7f9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.8; }
+    main { width: min(100% - 40px, 760px); margin: 64px auto; padding: 40px; background: #fff; border: 1px solid #e0e6eb; border-radius: 16px; }
+    .eyebrow { margin: 0 0 8px; color: #516779; font-size: 14px; letter-spacing: .05em; }
+    h1 { margin: 0 0 20px; font-size: clamp(26px, 5vw, 36px); line-height: 1.25; overflow-wrap: anywhere; }
+    h2 { margin: 28px 0 8px; font-size: 19px; }
+    p { margin: 12px 0; }
+    a { color: #195b8b; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid #8ebcdd; outline-offset: 4px; }
+    .note { padding: 14px 18px; background: #f1f6fa; border-left: 3px solid #759dbb; }
+    footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid #e0e6eb; color: #5d6a75; font-size: 14px; }
+    @media (max-width: 520px) { main { margin: 24px auto; padding: 24px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Personal file synchronization</p>
+      <h1>AI Project Drive Sync</h1>
+      <p>由 HaosuStrasbourg 管理的个人同步配置，使用 rclone，让本人控制的 Linux 设备与本人的 Google Drive 中选定的资料保持双向同步。</p>
+    </header>
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">应用用途</h2>
+      <p>应用通过 Google OAuth 获得本人授权，读取文件及其元数据，并按同步配置上传、更新、重命名或删除文件，使两端选定资料保持一致。同步配置限定实际处理的目录范围。</p>
+      <p>Google OAuth 授予的权限可能覆盖整个 Google Drive；目录范围限制来自同步配置，并非 Google 对授权范围的缩小。</p>
+    </section>
+    <section aria-labelledby="status">
+      <h2 id="status">使用与配置状态</h2>
+      <p>本工具仅供本人使用，非 Google 官方产品，也未获 Google 背书。本页说明应用用途和预定的数据处理方式；实际同步仍需完成配置、授权和验证。</p>
+      <p class="note">这个静态网站仅提供公开说明，不接收同步文件或授权凭据。请阅读<a href="privacy.html">隐私说明</a>，了解数据用途、授权范围和撤销方式。</p>
+    </section>
+    <footer>
+      <p><a href="privacy.html">隐私说明</a> · <a href="https://github.com/HaosuStrasbourg/ai-project-drive-sync-info/issues">联系维护者</a></p>
+      <p>联系入口为公开 GitHub Issues，请勿提交私人文件、账号凭据或其他敏感信息。</p>
+      <p>更新日期：2026-10-11</p>
+    </footer>
+  </main>
+</body>
+</html>
